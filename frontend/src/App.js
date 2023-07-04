@@ -1,10 +1,9 @@
 import React from "react";
-import Counter from "./components/Counter";
-
+import LoginPage from "./pages/LoginPage";
 function App() {
   return (
     <div>
-      <Counter />
+      <LoginPage />
     </div>
   );
 }

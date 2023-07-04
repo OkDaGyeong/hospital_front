@@ -1,6 +1,6 @@
-$blue: #228be6;
-$gray: #495057;
-$pink: #f06595;
+$mint: #20bccc;
+$blue: #0765a8;
+$grey: #b5c2c9;
 
 @mixin button-color($color) {
   background: $color;
@@ -12,18 +12,65 @@ $pink: #f06595;
   &:active {
     background: darken($color, 10%);
   }
+
+  &.outline {
+    color: $color;
+    background: none;
+    border: 1px solid $color;
+    &:hover {
+      background: $color;
+      color: white;
+    }
+  }
 }
 
 .Button {
+  //공통 속성
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  // padding: 5px 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  // 사이즈 관리
+  &.large {
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+
+  &.medium {
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+
+  &.small {
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
+
+  &.fullWidth {
+    width: 100%;
+    justify-content: center;
+    & + & {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  //색상
+  &.mint {
+    @include button-color($mint);
+  }
   &.blue {
     @include button-color($blue);
   }
-
-  &.gray {
-    @include button-color($gray);
+  &.grey {
+    @include button-color($grey);
   }
-
-  &.pink {
-    @include button-color($pink);
+  & + & {
+    margin-left: 1rem;
   }
 }

@@ -2,6 +2,7 @@ import React from "react";
 
 // import palette from "../../lib/styles/palette";
 import "../../styles/Button.scss";
+import classNames from "classnames";
 
 function Button({ children, size, color, outline, fullWidth, ...rest }) {
   return (
@@ -16,7 +17,7 @@ function Button({ children, size, color, outline, fullWidth, ...rest }) {
 
 Button.defaultProps = {
   size: "medium",
-  color: "blue",
+  color: "mint",
   // color: palette.blue[0],
 };
 
