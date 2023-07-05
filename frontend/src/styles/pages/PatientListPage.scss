@@ -5,3 +5,23 @@ $bgColor: #f1f2f7; //배경색
   width: 100vw;
   height: 100vh;
 }
+
+.content {
+  padding: 15px 25px;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: auto 260px;
+  box-sizing: border-box;
+  gap: 15px;
+}
+#userInfo {
+  display: grid;
+  grid-template-columns: 90px auto;
+  gap: 10px;
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
