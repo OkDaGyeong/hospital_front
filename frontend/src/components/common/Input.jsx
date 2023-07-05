@@ -1,9 +1,15 @@
 import React from "react";
-import "../../styles/Input.scss";
-function Input({ type }) {
+import "../../styles/common/Input.scss";
+import classNames from "classnames";
+function Input({ type, placeholder, size, ...rest }) {
   return (
     <>
-      <input type={type} />
+      <input
+        type={type}
+        placeholder={placeholder}
+        className={classNames(size)}
+        {...rest}
+      />
     </>
   );
 }

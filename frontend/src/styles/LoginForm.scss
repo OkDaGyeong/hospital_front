@@ -1,18 +1,28 @@
+$red : #E43026;
+
 form {
   width: 100%;
   display: flex;
   flex-direction: column;
 
-  input {
-    font-size: 20px;
-    margin-bottom: 1rem;
+  Input+Input {
+    margin-top: 1.3rem;
 
-    & + & {
-      margin-bottom: 2rem;
-    }
   }
+
 }
 
 #logoImg {
   margin-bottom: 40px;
+}
+
+#warring {
+  height: 50px;
+
+  p {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    color: $red;
+  }
 }

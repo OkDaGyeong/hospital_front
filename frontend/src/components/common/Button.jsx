@@ -1,7 +1,7 @@
 import React from "react";
 
 // import palette from "../../lib/styles/palette";
-import "../../styles/Button.scss";
+import "../../styles/common/Button.scss";
 import classNames from "classnames";
 
 function Button({ children, size, color, outline, fullWidth, ...rest }) {
