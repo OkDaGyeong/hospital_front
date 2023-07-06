@@ -4,6 +4,7 @@ import Header from "../containers/common/Header";
 import "../styles/pages/PatientListPage.scss";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
+
 function PatientList() {
   return (
     <>
@@ -20,16 +21,27 @@ function PatientList() {
                   <Button size={"small"}>검색</Button>
                 </Card.Title>
 
-                <Card.Text>
-                  <form action="">
-                    <label htmlFor="">
-                      병동
-                      <input type="text" size={"small"} />
-                    </label>
-                  </form>
-                </Card.Text>
+                <form action="#" className="search-form">
+                  <select name="병동" id="">
+                    {[
+                      "병동선택",
+                      "31병동",
+                      "51병동",
+                      "61병동",
+                      "62병동",
+                      "71병동",
+                      "72병동",
+                    ].map((room) => (
+                      <option key={room} value={room}>
+                        {room}
+                      </option>
+                    ))}
+                  </select>
+                  <input type="search" placeholder="의사코드" size={"small"} />
+                </form>
               </Card.Body>
             </Card>
+
             <Card>
               <Card.Body id="userInfo">
                 <Card.Img
@@ -39,7 +51,9 @@ function PatientList() {
                 <div>
                   <Card.Title>의료진 이름</Card.Title>
                   <Card.Text>진료과 코드</Card.Text>
-                  <Card.Link href="#">로그아웃</Card.Link>
+                  <Button size={"small"} outline fullWidth>
+                    로그아웃
+                  </Button>
                 </div>
               </Card.Body>
             </Card>
@@ -47,19 +61,19 @@ function PatientList() {
           <hr />
           <Card>
             <Card.Header
-              as="h5"
               style={{
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
+                fontWeight: 600,
               }}
             >
               <span>51병동/5101호</span>
               <span>이준0/44세/남성</span>
-              <Button>회진 ▶</Button>
+              <Button color={"blue"}>회진 ▶</Button>
             </Card.Header>
             <Card.Body>
-              <Table striped={"columns"}>
+              <Table bordered className="patient-table">
                 <tbody>
                   <tr>
                     <th>진료과</th>

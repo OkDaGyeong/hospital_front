@@ -47,8 +47,10 @@ function Header() {
                     title={expand}
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#">환자1</NavDropdown.Item>
-                    <NavDropdown.Item href="#">환자2</NavDropdown.Item>
+                    <NavDropdown.Item href="/patient">환자1</NavDropdown.Item>
+                    <NavDropdown.Item href="/patient-list">
+                      환자2
+                    </NavDropdown.Item>
                   </NavDropdown>
                 ))}
               </Nav>

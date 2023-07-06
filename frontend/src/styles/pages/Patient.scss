@@ -1,0 +1,29 @@
+$menuColor : #0E8CA7;
+
+#tab {
+  min-height: 750px;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: $menuColor;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link {
+  color: $menuColor;
+  // border: 1px solid $menuColor;
+  // border-bottom: none;
+}
+
+#searchDate {
+  width: 150px;
+  float: right;
+}
+
+#b-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

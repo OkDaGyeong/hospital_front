@@ -1,9 +1,10 @@
 $bgColor: #f1f2f7; //배경색
 
+
 .pl-bg {
   background-color: $bgColor;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .content {
@@ -16,12 +17,47 @@ $bgColor: #f1f2f7; //배경색
   box-sizing: border-box;
   gap: 15px;
 }
+
 #userInfo {
   display: grid;
   grid-template-columns: 90px auto;
   gap: 10px;
+
   img {
     width: 80px;
     height: 80px;
+  }
+}
+
+.patient-table {
+
+
+
+  th {
+    background-color: $bgColor;
+    text-align: center;
+  }
+
+  td {
+    background-color: #ffffff;
+  }
+}
+
+.card {
+  box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: 0.05);
+  border: none;
+
+}
+
+.search-form {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  input {
+    font-size: 14px;
+    width: 100px
   }
 }
